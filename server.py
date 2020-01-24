@@ -101,6 +101,7 @@ def handle_response(list_2):
             if(os.path.isfile(final_path)):
                 response = handle_return("200",final_path)
         # 2nd case redirect
+        # this time cant use isfile since + "/" may still not a file
         if(os.path.exists(final_path)):
             if(redirect_1):
                 if (redirect_2):
